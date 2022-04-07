@@ -1,11 +1,10 @@
 import { useContext } from 'react'
-import GithubContext from '../../context/GithubContext'
+import GithubContext from '../../context/github/GithubContext'
 
 import Spinner from '../layout/Spinner.js'
 import UserItem from './UserItem'
 const UserResults = () => {
   const { loading, users } = useContext(GithubContext)
-  console.log(users)
 
   return !loading ? (
     <>
