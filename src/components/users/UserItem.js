@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 const UserItem = ({ user: { login, avatar_url } }) => {
   return (
     <>
@@ -13,7 +13,7 @@ const UserItem = ({ user: { login, avatar_url } }) => {
             <h2 className='card-title'>{login}</h2>
             <Link
               className='text-base-content text-opacity-40'
-              to={`/users/${login}`}
+              to={`/user/${login}`}
             >
               visit profile
             </Link>
@@ -21,7 +21,7 @@ const UserItem = ({ user: { login, avatar_url } }) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default UserItem;
+export default UserItem
