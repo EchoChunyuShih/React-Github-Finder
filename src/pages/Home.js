@@ -3,7 +3,6 @@ import UserSearch from '../components/users/UserSearch'
 const Home = () => {
   return (
     <>
-      {/* SEARCH COMPONENTS */}
       <UserSearch />
       <UserResults />
     </>
