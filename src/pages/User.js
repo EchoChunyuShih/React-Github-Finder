@@ -7,8 +7,9 @@ import { FaCodepen, FaStore, FaUserFriends, FaUsers } from 'react-icons/fa'
 
 import Spinner from '../components/layout/Spinner'
 import RepoList from '../components/repos/RepoList'
+import { getUser, getUserRepos } from '../context/github/GithubActions'
 
-//react router v5
+//react router v5s
 // const User = ({ match }) => {
 //   const { getUser, user } = useContext(GithubContext)
 //   useEffect(() => {
@@ -18,18 +19,22 @@ import RepoList from '../components/repos/RepoList'
 // }
 
 const User = () => {
-  const { getUser, user, loading, getUserRepos, repos } =
-    useContext(GithubContext)
+  const { user, loading, repos, dispatch } = useContext(GithubContext)
   console.log(user)
   const params = useParams()
-  console.log(params.login)
   useEffect(() => {
+    dispatch({ type: 'SET_LOADING' })
+    const getUserData = async () => {
+      const userData = await getUser(params.login)
+      dispatch({ type: 'GET_USER', payload: userData })
+
+      const userRepoData = await getUserRepos(params.login)
+      dispatch({ type: 'GET_REPOS', payload: userRepoData })
+    }
     setTimeout(() => {
-      getUser(params.login)
-      getUserRepos(params.login)
-    }, 1000)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+      getUserData()
+    }, 500)
+  }, [dispatch, params.login])
 
   const {
     name,
