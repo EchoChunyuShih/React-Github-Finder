@@ -1,11 +1,4 @@
-import {
-  FaEye,
-  FaInfo,
-  FaLaptopMedical,
-  FaLink,
-  FaStar,
-  FaUtensils,
-} from 'react-icons/fa'
+import { FaEye, FaInfo, FaLink, FaStar, FaUtensils } from 'react-icons/fa'
 
 const RepoItem = ({ repo }) => {
   const {
