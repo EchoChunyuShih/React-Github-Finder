@@ -1,6 +1,4 @@
 import { createContext, useReducer } from 'react'
-import { createRenderer } from 'react-dom/test-utils'
-import { useNavigate } from 'react-router-dom'
 import githubReducer from './GithubReducer'
 
 const GithubContext = createContext()
