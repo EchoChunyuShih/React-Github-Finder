@@ -2,7 +2,7 @@
 </h1>
 
 <p align="center">
-  <a href="react-github-finder-git-main-echochunyushih.vercel.app"><img alt="codesandbox" src="https://img.shields.io/badge/view%20on%20Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>  
+  <a href="https://react-github-finder-git-main-echochunyushih.vercel.app"><img alt="codesandbox" src="https://img.shields.io/badge/view%20on%20Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>  
 </p>
 
 <div align="center">
