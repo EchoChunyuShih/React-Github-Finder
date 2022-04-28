@@ -13,6 +13,8 @@
 <img alt="echo" src="https://img.shields.io/badge/Made%20by-Echo-ff69b4"/>
 
 </div>
+## 📄 Description
+A Github user search application using React and Github API for profile details and repositories.
 
 ## 🛠 Tools Used
 
