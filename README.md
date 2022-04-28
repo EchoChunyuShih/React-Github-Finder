@@ -13,3 +13,9 @@
 <img alt="echo" src="https://img.shields.io/badge/Made%20by-Echo-ff69b4"/>
 
 </div>
+
+## 🛠 Tools Used
+
+- [Tailwind](https://tailwindcss.com/)
+- [DaisyUI](https://daisyui.com/)
+- [sass](https://www.npmjs.com/package/sass)
