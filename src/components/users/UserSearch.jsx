@@ -1,7 +1,9 @@
 import { useState, useContext } from 'react'
+
 import GithubContext from '../../context/github/GithubContext'
 import AlertContext from '../../context/alert/AlertContext'
 import { searchUsers } from '../../context/github/GithubActions'
+
 const UserSearch = () => {
   const [text, setText] = useState('')
   const { users, dispatch } = useContext(GithubContext)
@@ -25,13 +27,13 @@ const UserSearch = () => {
     dispatch({ type: 'CLEAR_USERS' })
   }
   return (
-    <div className='flex justify-center items-center m-auto w-2/3 xl:w-3/5 lg:w-3/5 md:w-4/5 mb-8 gap-8'>
+    <div className='flex justify-center items-center m-auto w-2/3 xl:w-3/5 lg:w-3/5 md:w-4/5 mb-8 gap-8 py-10'>
       <div>
         <form className='form-control' onSubmit={handleSubmit}>
           <div className='relative'>
             <input
               type='text'
-              className='w-96 pr-5 pl-5 bg-gray-50 input-lg input-bordered input text-black text-xl mono'
+              className='w-96 pr-5 pl-5 bg-light input-lg input-bordered input rounded-sm text-black text-xl'
               placeholder='Search a Github username...'
               value={text}
               onChange={handleChange}

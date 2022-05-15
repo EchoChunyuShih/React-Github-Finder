@@ -1,24 +1,26 @@
 import { Link } from 'react-router-dom'
+
 const UserItem = ({ user: { login, avatar_url } }) => {
   return (
     <>
-      <Link
-        className='card text-slate-50 text-opacity-70 hover:bg-slate-300 hover:shadow-lg hover:text-gray-800 mx-1 hover:cursor-pointer shadow-md card-compact bg-slate-700 my-2 transition duration-400 ease-out hover:ease-in'
-        to={`/user/${login}`}
-      >
-        <div className='flex-row items-center space-x-4 card-body'>
-          <div className='avatar'>
-            <div className='rounded-full shadow w-14 h-14'>
-              <img src={avatar_url} alt='profile' />
+      <Link to={`/user/${login}`}>
+        <div className='text-light border-gray border-2 hover:bg-gray hover:border-light hover:shadow-lg hover:text-dark hover:cursor-pointer shadow-md card-compact  transition duration-400 ease-out hover:ease-in p-1 mx-1 rounded-sm'>
+          <div className='flex flex-row items-center space-x-2 card-body'>
+            <div className='avatar'>
+              <div className='rounded-full shadow-xl w-14 h-14'>
+                <img src={avatar_url} alt='profile' />
+              </div>
             </div>
-          </div>
-          <div>
-            <h2 className='card-title tracking-wide mono'>
-              <span>@</span>
-              {login}
-            </h2>
+            <p
+              className='text-xl tracking-wide mono truncate'
+              data-tooltip-target='tooltip-default'
+            >
+              @{login}
+            </p>
           </div>
         </div>
+
+        {/* </div> */}
       </Link>
     </>
   )
