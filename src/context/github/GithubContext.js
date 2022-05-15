@@ -12,12 +12,19 @@ export const GithubProvider = ({ children }) => {
     loading: false,
   }
   const [state, dispatch] = useReducer(githubReducer, initialState)
-
+  // format intergers
+  const IntergerFormatter = (int) => {
+    const formatted = new Intl.NumberFormat('en-us', {
+      maximumFractionDigits: 0,
+    }).format(int)
+    return formatted
+  }
   return (
     <GithubContext.Provider
       value={{
         ...state,
         dispatch,
+        IntergerFormatter,
       }}
     >
       {children}
