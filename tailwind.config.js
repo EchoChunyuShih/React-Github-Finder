@@ -1,7 +1,29 @@
+const autoprefixer = require('autoprefixer')
+
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      colors: {
+        'neon-green': '#56FFE8',
+        gray: '#94a3b8', //slate-400
+        'dark-gray': '#6b7280',
+        dark: '#1e293b', //slate-700
+        light: '#f8fafc', //slate-50
+      },
+      spacing: {
+        9.1: '2.1rem',
+        45: '11.5rem',
+      },
+      fontFamily: {
+        sans: ['IBM Plex Sans', 'sans-serif'],
+      },
+      container: {
+        padding: {
+          DEFAULT: '1rem',
+          sm: '1.5rem',
+        },
+      },
       keyframes: {
         'slide-in': {
           '0%': {
@@ -24,11 +46,20 @@ module.exports = {
             transform: 'translateZ(160px)',
           },
         },
+        'hover-action': {
+          '0%': {
+            '-webkit-transform': 'translatex(0px)',
+            transform: 'translatex(0px)',
+          },
+          '100%': {
+            '-webkit-transform': 'translatex(-10px)',
+            transform: 'translatex(-10px)',
+          },
+        },
       },
       animation: {
         'slide-in': 'slide-in 1s ease-out',
-        'slide-fwd':
-          'slide-fwd 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
+        'hover-action': 'hover-action 1s linear 0s infinite',
       },
       gridTemplateColumns: {
         //for repo list
