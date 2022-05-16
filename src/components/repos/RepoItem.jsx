@@ -34,9 +34,10 @@ const RepoItem = ({ repo }) => {
       Java: 'bg-yellow-800',
       Perl: 'bg-fushia-600',
       Lua: 'bg-rose-200',
-      'Jupyter Notebook': '',
+      'Jupyter Notebook': 'bg-fushia-300',
       Matlab: 'bg-lime-500',
       C: 'bg-red-400',
+      TeX: 'bg-lime-200',
     }
     return lang_colors[lang]
   }
