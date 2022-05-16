@@ -61,6 +61,14 @@ const User = () => {
   ) : (
     <>
       <div className='w-full'>
+        <a
+          href='https://github.com/EchoChunyuShih/react-github-finder'
+          target='_blank'
+          rel='noreferrer'
+          className='absolute top-5 right-10 hover:text-neon-green'
+        >
+          &#60; Source /&#62;
+        </a>
         <div className='container ml-10'>
           <Link to='/' className='btn btn-ghost btn-sm btn-action'>
             <VscArrowSmallLeft
