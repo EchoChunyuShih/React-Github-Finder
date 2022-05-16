@@ -15,7 +15,7 @@
 </div>
 
 ## 📄 Description
-A Github user search application using React and Github API for profile details and repositories.
+A Github user search application using React and Github API for a cooler look of profile details and repositories.
 
 ## 🛠 Tools Used
 
