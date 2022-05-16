@@ -110,7 +110,7 @@ const User = () => {
               <span className='mx-1'>{blog}</span>
             </a>
           )}
-          <div className='flex w-5/6 justify-between items-center my-4 flex-wrap md:w-3/4'>
+          <div className='flex w-full mx-4 justify-evenly items-center my-4 flex-wrap '>
             {location && (
               <div className='flex items-center col-auto mx-1'>
                 <HiOutlineLocationMarker />
@@ -149,8 +149,8 @@ const User = () => {
         </div>
       </div>
 
-      <div className='bg-light'>
-        <div className='relative bottom-20 grid-cols-4 grid py-5 m-auto md:w-3/4 w-auto text-dark-gray gap-x-2 sm:gap-x-1 lg:gap-x-4'>
+      <div className='flex justify-center bg-light'>
+        <div className='stats rounded-sm text-dark-gray relative bottom-16 shadow-md'>
           <div className={stat}>
             <div className={stat_number}>{IntergerFormatter(followers)}</div>
             <div className='stat-title'>Followers</div>
@@ -178,7 +178,6 @@ const User = () => {
     </>
   )
 }
-const stat =
-  'w-full rounded-sm shadow-md bg-slate-50 m-auto md:px-5 py-4 text-center px-2'
-const stat_number = 'text-3xl md:text-4xl'
+const stat = 'stat bg-light py-4 text-center px-5'
+const stat_number = 'text-3xl'
 export default User

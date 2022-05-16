@@ -1,8 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@300&family=Noto+Sans+Mono:wght@300&family=Share+Tech+Mono&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.custom-card-image .card.image-full:before {
-  border-radius: 0.5rem;
-  opacity: 0.45;
+body {
+  font-family: 'IBM Plex Mono', 'Share Tech Mono', 'Noto Sans Mono',
+    'Cutive Mono', monospace;
+}
+
+.mono {
+  font-family: 'IBM Plex Mono';
+}
+
+.btn-action:hover .btn-action-arrow {
+  animation: hover-action 1s linear 0s infinite;
+}
+@keyframes hover-action {
+  0% {
+    /* -webkit-transform: 'translatex(0px)', */
+    transform: translatex(0px);
+  }
+  100% {
+    /* -webkit-transform: 'translatex(-10px)', */
+    transform: translatex(-10px);
+  }
 }
