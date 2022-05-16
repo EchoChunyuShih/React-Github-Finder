@@ -18,12 +18,7 @@ module.exports = {
       fontFamily: {
         sans: ['IBM Plex Sans', 'sans-serif'],
       },
-      container: {
-        padding: {
-          DEFAULT: '1rem',
-          sm: '1.5rem',
-        },
-      },
+
       keyframes: {
         'slide-in': {
           '0%': {
