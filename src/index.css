@@ -9,8 +9,14 @@ body {
     'Cutive Mono', monospace;
 }
 
-.mono {
-  font-family: 'IBM Plex Mono';
+.repo-item:hover .repo-title {
+  text-decoration: underline;
+  color: #56ffe8;
+}
+
+.repo-item:hover .repo-description,
+.repo-item:hover .repo-stat {
+  color: #f8fafcb4;
 }
 
 .btn-action:hover .btn-action-arrow {

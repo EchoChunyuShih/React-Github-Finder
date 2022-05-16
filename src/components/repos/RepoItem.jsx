@@ -38,25 +38,29 @@ const RepoItem = ({ repo }) => {
   }
 
   return (
-    <div className='mb-2 shadow-md rounded-md bg-slate-300  px-4 py-4 h-full flex flex-col justify-between hover:cursor-pointer hover:bg-slate-700 transition duration-400 ease-out hover:ease-in'>
+    <div className='repo-item mb-2 shadow-md rounded-md bg-slate-300 px-4 py-4 h-full flex flex-col justify-between hover:cursor-pointer hover:bg-dark transition duration-400 ease-out hover:ease-in'>
       <a
         href={html_url}
         rel='noreferer'
         target='_blank'
-        className='flex items-center justify-start hover:underline hover:text-blue-400 text-slate-700  text-xl mono'
+        className='repo-title flex items-center justify-start text-dark text-xl'
       >
         <VscRepo className='mr-1' />
         <h3 className='mb-1 text-lg font-semibold truncate'>{name}</h3>
       </a>
 
-      <em className='text-sm my-1 text-slate-600'>{description}</em>
+      <em className='text-sm my-1 text-dark-gray repo-description'>
+        {description}
+      </em>
 
       <div className='flex w-full justify-between items-center text-slate-600 text-sm'>
         <div className='flex w-2/3 justify-start items-center text-slate-600 text-sm'>
           {language && (
             <div className='flex justify-start items-center mr-3'>
               <div
-                className={`w-2 h-2 rounded-full ${lang_color(language)} mr-2`}
+                className={`w-2 h-2 rounded-full ${lang_color(
+                  language
+                )} mr-2 repo-stat`}
               ></div>
               <div>{language}</div>
             </div>
@@ -65,10 +69,7 @@ const RepoItem = ({ repo }) => {
             <IoMdStar className='mr-1' />
             {IntergerFormatter(stargazers_count)}
           </div>
-          {/* <div className={repo_info}>
-          <FaInfo className='mr-2' />
-          {open_issues}
-        </div> */}
+
           <div className={repo_info}>
             <VscRepoForked className='mr-1' />
             {forks}
@@ -81,5 +82,5 @@ const RepoItem = ({ repo }) => {
     </div>
   )
 }
-const repo_info = 'mr-3 flex items-center'
+const repo_info = 'mr-3 flex items-center repo-stat'
 export default RepoItem
