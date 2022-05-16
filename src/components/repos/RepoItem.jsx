@@ -58,11 +58,9 @@ const RepoItem = ({ repo }) => {
           {language && (
             <div className='flex justify-start items-center mr-3'>
               <div
-                className={`w-2 h-2 rounded-full ${lang_color(
-                  language
-                )} mr-2 repo-stat`}
+                className={`w-2 h-2 rounded-full ${lang_color(language)} mr-2`}
               ></div>
-              <div>{language}</div>
+              <div className='repo-stat'>{language}</div>
             </div>
           )}
           <div className={repo_info}>
