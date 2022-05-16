@@ -27,12 +27,16 @@ const RepoItem = ({ repo }) => {
       Python: 'bg-blue-500',
       Vue: 'bg-emerald-700',
       'C++': 'bg-pink-500',
+      'C#': 'bg-pink-700',
       Haxe: 'bg-orange-400',
       Scala: 'bg-red-700',
       Shell: 'bg-green-300',
       Java: 'bg-yellow-800',
-      Perl: '',
-      Lua: '',
+      Perl: 'bg-fushia-600',
+      Lua: 'bg-rose-200',
+      'Jupyter Notebook': '',
+      Matlab: 'bg-lime-500',
+      C: 'bg-red-400',
     }
     return lang_colors[lang]
   }

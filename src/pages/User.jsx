@@ -118,23 +118,23 @@ const User = () => {
               <span className='mx-1'>{blog}</span>
             </a>
           )}
-          <div className='flex w-full mx-4 justify-evenly items-center my-4 flex-wrap '>
+          <div className='flex w-full mx-4 justify-center items-center my-4 flex-wrap'>
             {location && (
               <div className='flex items-center col-auto mx-1'>
                 <HiOutlineLocationMarker />
-                <div className='text mx-1'>{location}</div>
+                <div className={user_detail}>{location}</div>
               </div>
             )}
             {company && (
               <div className='flex items-center col-auto mx-1'>
                 <HiOutlineBriefcase />
-                <div className='text mx-1'>{company}</div>
+                <div className={user_detail}>{company}</div>
               </div>
             )}
 
             <div className='flex items-center col-auto mx-1'>
               <IoCalendarOutline />
-              <div className='text mx-1'>
+              <div className={user_detail}>
                 Join {moment(created_at).format('YYYY MMM DD')}
               </div>
             </div>
@@ -142,7 +142,7 @@ const User = () => {
             {twitter_username && (
               <div className='flex items-center hover:underline col-auto mx-1 hover:text-blue-400'>
                 <TiSocialTwitter fontSize={20} />
-                <div className='text '>
+                <div className={user_detail}>
                   <a
                     href={`https://twitter.com/${twitter_username}`}
                     target='_blank'
@@ -188,4 +188,5 @@ const User = () => {
 }
 const stat = 'stat bg-light py-4 text-center px-5'
 const stat_number = 'text-3xl'
+const user_detail = 'text mr-6 ml-1'
 export default User
