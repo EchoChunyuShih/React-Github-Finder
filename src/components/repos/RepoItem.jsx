@@ -38,6 +38,7 @@ const RepoItem = ({ repo }) => {
       Matlab: 'bg-lime-500',
       C: 'bg-red-400',
       TeX: 'bg-lime-200',
+      Kotlin: 'bg-amber-400',
     }
     return lang_colors[lang]
   }
