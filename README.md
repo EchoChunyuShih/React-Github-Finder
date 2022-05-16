@@ -21,7 +21,7 @@ A Github user search application using React and Github API for a cooler look of
 
 - [Tailwind](https://tailwindcss.com/)
 - [DaisyUI](https://daisyui.com/)
-- [sass](https://www.npmjs.com/package/sass)
+- [Sass](https://www.npmjs.com/package/sass)
 
 ## 🥳 Live Demo
  <a href="https://react-github-finder-git-main-echochunyushih.vercel.app"><img alt="codesandbox" src="https://img.shields.io/badge/view%20on%20Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>  
