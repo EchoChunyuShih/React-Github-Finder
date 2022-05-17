@@ -3,6 +3,7 @@ import { VscRepoForked, VscRepo } from 'react-icons/vsc'
 import { IoMdStar } from 'react-icons/io'
 
 import GithubContext from '../../context/github/GithubContext'
+import { colorMap } from '../../assets/colorMap'
 
 const RepoItem = ({ repo }) => {
   const { IntergerFormatter } = useContext(GithubContext)
@@ -18,35 +19,7 @@ const RepoItem = ({ repo }) => {
   //conditional colors
 
   const lang_color = (lang) => {
-    const lang_colors = {
-      C: 'bg-red-400',
-      'C++': 'bg-pink-500',
-      'C#': 'bg-pink-700',
-      CSS: 'bg-indigo-700',
-      CoffeeScript: 'bg-amber-800',
-      Clojure: 'bg-sky-500',
-      Go: 'bg-sky-300',
-      HTML: 'bg-orange-600',
-      Haxe: 'bg-orange-400',
-      Java: 'bg-yellow-800',
-      JavaScript: 'bg-amber-300',
-      'Jupyter Notebook': 'bg-fuchsia-300',
-      Kotlin: 'bg-amber-400',
-      Lua: 'bg-rose-200',
-      'Objective-C': 'bg-green-800',
-      PHP: 'bg-sky-700',
-      Python: 'bg-blue-500',
-      Perl: 'bg-fushia-600',
-      Ruby: 'bg-rose-500',
-      Matlab: 'bg-lime-500',
-      TypeScript: 'bg-cyan-700',
-      TeX: 'bg-lime-200',
-      Scala: 'bg-red-700',
-      Shell: 'bg-green-300',
-      Swift: 'bg-orange-500',
-      Vue: 'bg-emerald-700',
-    }
-    return lang_colors[lang]
+    return colorMap[lang]
   }
 
   return (
