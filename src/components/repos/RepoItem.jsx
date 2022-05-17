@@ -22,20 +22,24 @@ const RepoItem = ({ repo }) => {
   }
 
   return (
-    <div className='repo-item mb-2 shadow-md rounded-md bg-slate-300 px-4 py-4 h-full flex flex-col justify-between space-y-3 hover:cursor-pointer hover:bg-dark transition duration-400 ease-out hover:ease-in'>
+    <div className='group mb-2 shadow-md rounded-md bg-slate-300 px-4 py-4 h-full flex flex-col justify-between space-y-3 hover:cursor-pointer hover:bg-dark transition duration-400 ease-out hover:ease-in'>
       <a
         href={html_url}
         rel='noreferrer'
         target='_blank'
-        className='repo-title flex items-center justify-start text-dark text-xl space-x-2'
+        className='flex items-center justify-start text-dark text-xl space-x-2 group-hover:text-neon-green'
       >
         <VscRepo />
-        <h3 className='text-lg font-semibold truncate'>{name}</h3>
+        <h3 className='text-lg font-semibold truncate group-hover:underline'>
+          {name}
+        </h3>
       </a>
-      <em className='text-sm text-dark-gray repo-description'>{description}</em>
+      <em className='text-sm text-dark-gray group-hover:text-light'>
+        {description}
+      </em>
 
-      <div className='flex w-full justify-between items-center text-dark-gray text-sm'>
-        <div className='flex w-2/3 justify-start items-center text-dark-gray text-sm space-x-4'>
+      <div className='flex w-full justify-between items-center text-dark-gray text-sm group-hover:text-light-gray'>
+        <div className='flex w-2/3 justify-start items-center text-dark-gray text-sm space-x-4 group-hover:text-light-gray'>
           {language && (
             <div className='flex justify-start items-center'>
               <div

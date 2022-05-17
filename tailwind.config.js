@@ -6,9 +6,10 @@ module.exports = {
     extend: {
       colors: {
         'neon-green': '#56FFE8',
+        'light-gray': '#cbd5e1',
         gray: '#94a3b8', //slate-400
         'dark-gray': '#6b7280',
-        dark: '#1e293b', //slate-700
+        dark: '#374151', //slate-700
         light: '#f8fafc', //slate-50
       },
       spacing: {
@@ -16,6 +17,12 @@ module.exports = {
         45: '11.5rem',
       },
       fontFamily: {
+        mono: [
+          'IBM Plex Mono',
+          'Share Tech Mono',
+          'Noto Sans Mono',
+          'Cutive Mono',
+        ],
         sans: ['IBM Plex Sans', 'sans-serif'],
       },
 
@@ -41,7 +48,7 @@ module.exports = {
             transform: 'translateZ(160px)',
           },
         },
-        'hover-action': {
+        'arrow-point-left': {
           '0%': {
             '-webkit-transform': 'translatex(0px)',
             transform: 'translatex(0px)',
@@ -54,7 +61,7 @@ module.exports = {
       },
       animation: {
         'slide-in': 'slide-in 1s ease-out',
-        'hover-action': 'hover-action 1s linear 0s infinite',
+        'arrow-point-left': 'arrow-point-left 1s linear 0s infinite',
       },
     },
   },

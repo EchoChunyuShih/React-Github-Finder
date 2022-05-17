@@ -9,7 +9,7 @@ const UserResults = () => {
 
   return !loading ? (
     <>
-      <div className='grid grid-cols-1 mx-3 pb-12 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+      <div className='grid grid-cols-1 mx-3 pb-12 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-7xl'>
         {users.map((user) => (
           <UserItem key={user.id} user={user} />
         ))}

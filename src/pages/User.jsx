@@ -69,8 +69,11 @@ const User = () => {
         >
           &#60; Source /&#62;
         </a>
-        <Link to='/' className='btn btn-ghost btn-sm btn-action ml-6'>
-          <VscArrowSmallLeft fontSize={25} className='btn-action-arrow mr-1' />
+        <Link to='/' className='btn btn-ghost btn-sm group ml-6'>
+          <VscArrowSmallLeft
+            fontSize={25}
+            className='group-hover:animate-arrow-point-left mr-1'
+          />
           Back To Search
         </Link>
 
