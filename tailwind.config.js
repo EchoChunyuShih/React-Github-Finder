@@ -56,10 +56,6 @@ module.exports = {
         'slide-in': 'slide-in 1s ease-out',
         'hover-action': 'hover-action 1s linear 0s infinite',
       },
-      gridTemplateColumns: {
-        //for repo list
-        3: 'repeat(auto-fit, minmax(300px, 1fr))',
-      },
     },
   },
   plugins: [require('daisyui')],

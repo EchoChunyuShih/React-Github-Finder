@@ -69,15 +69,11 @@ const User = () => {
         >
           &#60; Source /&#62;
         </a>
-        <div className='container ml-10'>
-          <Link to='/' className='btn btn-ghost btn-sm btn-action'>
-            <VscArrowSmallLeft
-              fontSize={25}
-              className='btn-action-arrow mr-1'
-            />
-            Back To Search
-          </Link>
-        </div>
+        <Link to='/' className='btn btn-ghost btn-sm btn-action ml-6'>
+          <VscArrowSmallLeft fontSize={25} className='btn-action-arrow mr-1' />
+          Back To Search
+        </Link>
+
         <div className='user-avatar my-3 rounded-full flex justify-center'>
           <img
             src={avatar_url}
@@ -86,8 +82,8 @@ const User = () => {
           />
         </div>
 
-        <div className='flex flex-col items-center justify-center my-1 pb-20'>
-          <h1 className='text-3xl font-black my-1 text-light'>{name}</h1>
+        <div className='flex flex-col items-center justify-center space-y-2 pb-20'>
+          <h1 className='text-3xl font-black text-light'>{name}</h1>
           <a
             href={html_url}
             target='_blank'
@@ -96,17 +92,13 @@ const User = () => {
           >
             @{login}
           </a>
-          <div className='flex item center justify-center'>
-            <div className='ml-2 mr-1 badge badge-sm badge-success my-2'>
-              {type}
-            </div>
+          <div className='flex item-center justify-center space-x-2'>
+            <div className='badge badge-sm badge-success'>{type}</div>
             {hireable && (
-              <div className='badge badge-sm badge-info my-2 ml-1'>
-                Hireable
-              </div>
+              <div className='badge badge-sm badge-info'>Hireable</div>
             )}
           </div>
-          <em className='w-3/4 md:w-3/5 text-center'>{bio}</em>
+          <em className='w-3/4 md:w-2/5 text-center'>{bio}</em>
           {blog && (
             <a
               href={`https://${blog}`}

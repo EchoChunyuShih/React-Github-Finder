@@ -16,12 +16,11 @@ function App() {
         <Router>
           <div className='flex flex-col justify-between h-screen'>
             <Navbar />
-            <main className=''>
+            <main className='max-w-9xl mx-auto'>
               <Alert />
               <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/user/:login' element={<User />} />
-
                 <Route path='/notfound' element={<NotFound />} />
                 <Route path='/*' element={<NotFound />} />
               </Routes>

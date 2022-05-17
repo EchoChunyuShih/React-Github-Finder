@@ -37,8 +37,8 @@ const RepoList = ({ repos }) => {
 
   return (
     <>
-      <div className='w-5/6 h-full mx-auto relative bottom-10 m-auto'>
-        <div className='flex justify-start items-center mb-10'>
+      <div className='w-5/6 h-full mx-auto relative bottom-10'>
+        <div className='flex justify-start items-center mb-10 xl:mx-16'>
           <h2 className='text-3xl font-bold'>Top Repos</h2>
           <span className='ml-3'>by</span>
           <div
@@ -71,7 +71,7 @@ const RepoList = ({ repos }) => {
             </div>
           )}
         </div>
-        <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 items-center gap-3'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 items-center gap-3 xl:mx-16'>
           {displayRepo.map((repo) => (
             <RepoItem key={repo.id} repo={repo} />
           ))}
