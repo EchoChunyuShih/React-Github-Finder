@@ -28,7 +28,6 @@ const RepoList = ({ repos }) => {
     }
   }, [])
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen)
-  console.log(dropdownOpen)
   const changeRepoSort = (sortType) => {
     setSortType(sortType)
     toggleDropdown()
