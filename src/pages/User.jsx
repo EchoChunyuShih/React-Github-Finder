@@ -117,19 +117,19 @@ const User = () => {
             {location && (
               <div className='flex items-center col-auto mx-1'>
                 <HiOutlineLocationMarker />
-                <div className={user_detail}>{location}</div>
+                <div className='user_detail'>{location}</div>
               </div>
             )}
             {company && (
               <div className='flex items-center col-auto mx-1'>
                 <HiOutlineBriefcase />
-                <div className={user_detail}>{company}</div>
+                <div className='user_detail'>{company}</div>
               </div>
             )}
 
             <div className='flex items-center col-auto mx-1'>
               <IoCalendarOutline />
-              <div className={user_detail}>
+              <div className='user_detail'>
                 Join {moment(created_at).format('YYYY MMM DD')}
               </div>
             </div>
@@ -137,7 +137,7 @@ const User = () => {
             {twitter_username && (
               <div className='flex items-center hover:underline col-auto mx-1 hover:text-blue-400'>
                 <TiSocialTwitter fontSize={20} />
-                <div className={user_detail}>
+                <div className='user_detail'>
                   <a
                     href={`https://twitter.com/${twitter_username}`}
                     target='_blank'
@@ -154,23 +154,23 @@ const User = () => {
 
       <div className='flex justify-center bg-light'>
         <div className='stats rounded-sm text-dark-gray relative bottom-16 shadow-md'>
-          <div className={stat}>
-            <div className={stat_number}>{IntergerFormatter(followers)}</div>
+          <div className='custom-stat'>
+            <div className='stat_number'>{IntergerFormatter(followers)}</div>
             <div className='stat-title'>Followers</div>
           </div>
 
-          <div className={stat}>
-            <div className={stat_number}>{IntergerFormatter(following)}</div>
+          <div className='custom-stat'>
+            <div className='stat_number'>{IntergerFormatter(following)}</div>
             <div className='stat-title'>Following</div>
           </div>
 
-          <div className={stat}>
-            <div className={stat_number}>{IntergerFormatter(public_repos)}</div>
+          <div className='custom-stat'>
+            <div className='stat_number'>{IntergerFormatter(public_repos)}</div>
             <div className='stat-title'>Repos</div>
           </div>
 
-          <div className={stat}>
-            <div className={stat_number}>{IntergerFormatter(public_gists)}</div>
+          <div className='custom-stat'>
+            <div className='stat_number'>{IntergerFormatter(public_gists)}</div>
             <div className='stat-title'>Public Gists</div>
           </div>
         </div>
@@ -181,7 +181,5 @@ const User = () => {
     </>
   )
 }
-const stat = 'stat bg-light py-4 text-center px-5'
-const stat_number = 'text-3xl'
-const user_detail = 'text mr-6 ml-1'
+
 export default User

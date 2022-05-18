@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .custom-stat {
+    @apply stat bg-light py-4 text-center px-5;
+  }
+  .stat_number {
+    @apply text-3xl;
+  }
+  .user_detail {
+    @apply mr-6 ml-1;
+  }
+}
