@@ -1,4 +1,4 @@
-<h1 align="center"> React Github Finder
+<h1 align="center">Github Finder
 </h1>
 
 <p align="center">
