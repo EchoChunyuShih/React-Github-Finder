@@ -7,9 +7,9 @@
 
 <div align="center">
 <img alt="react" src="https://img.shields.io/badge/React-v.17-000?&logo=react"/>  
-  <img alt="npm" src="https://img.shields.io/badge/NPM-blue?logo=npm"/>
-  <img alt="tailwind" src="https://img.shields.io/badge/Tailwind-06B6D4?&logo=TailwindCss&logoColor=white">
-<img alt="styled prettier" src="https://img.shields.io/badge/styled%20with-Prettier-yellow"/>
+<img alt="sass" src="https://img.shields.io/badge/Sass-white?logo=sass&color=CC6699&logoColor=white"/>  
+<img alt="tailwind" src="https://img.shields.io/badge/Tailwind-06B6D4?&logo=TailwindCss&logoColor=white">
+<img alt="npm" src="https://img.shields.io/badge/NPM-blue?logo=npm"/>
 <img alt="echo" src="https://img.shields.io/badge/Made%20by-Echo-ff69b4"/>
 
 </div>
