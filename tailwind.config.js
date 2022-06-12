@@ -14,7 +14,7 @@ module.exports = {
       },
       spacing: {
         9.1: '2.1rem',
-        45: '11.5rem',
+        45: '15.5rem',
       },
       fontFamily: {
         mono: [
