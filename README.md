@@ -22,3 +22,7 @@ A Github user search application using React and Github API for a cooler look of
 - [Tailwind](https://tailwindcss.com/)
 - [DaisyUI](https://daisyui.com/)
 
+## 🥳 Sneak Peak
+<p align="center">
+<img alt='demo' src='https://media.giphy.com/media/E9UceGnUOFPbiwpdQG/giphy.gif' width='550' >
+ </p>
