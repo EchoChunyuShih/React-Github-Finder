@@ -6,19 +6,35 @@ import RepoItem from './RepoItem'
 const RepoList = ({ repos }) => {
   const [displayRepo, setDisplayRepo] = useState([])
   const [dropdownOpen, setDropdownOpen] = useState(false)
-  const [sortType, setSortType] = useState('stars')
-  const sortTypes = ['stars', 'forks', 'size']
+  const [sortType, setSortType] = useState('last updated')
+  const sortTypes = ['stars', 'forks', 'size', 'last updated']
+
   const getTopRepos = (type) => {
-    const LIMIT = 10
+    const LIMIT = 50
     const map = {
       stars: 'stargazers_count',
       forks: 'forks_count',
       size: 'size',
+      'last updated': 'pushed_at',
     }
     const sortProperty = map[type]
-    const sorted = repos
-      .sort((a, b) => b[sortProperty] - a[sortProperty])
-      .slice(0, LIMIT)
+
+    function ConvertToTimeStamp(sortProperty) {
+      return Math.floor(new Date(sortProperty).getTime() / 1000)
+    }
+
+    const sorted =
+      sortProperty == 'pushed_at'
+        ? repos
+            .sort(
+              (a, b) =>
+                ConvertToTimeStamp(b[sortProperty]) -
+                ConvertToTimeStamp(a[sortProperty])
+            )
+            .slice(0, LIMIT)
+        : repos
+            .sort((a, b) => b[sortProperty] - a[sortProperty])
+            .slice(0, LIMIT)
 
     setDisplayRepo(sorted)
   }
